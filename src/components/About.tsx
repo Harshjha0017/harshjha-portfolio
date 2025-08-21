@@ -22,14 +22,27 @@ const About = () => {
             <div className="flex justify-center">
               <div className="relative">
                 <div className="w-80 h-80 rounded-2xl bg-gradient-to-br from-blue-500 to-teal-500 p-1">
-                  <div className="w-full h-full rounded-2xl bg-gray-200 dark:bg-gray-700 flex items-center justify-center">
-                    <div className="text-center">
-                      <div className="w-32 h-32 bg-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center">
-                        <span className="text-4xl font-bold text-white">HJ</span>
+                  <div className="w-full h-full rounded-2xl overflow-hidden">
+                    <img 
+                      src="/profile-image.jpg" 
+                      alt="Harsh Jha - Data Analyst & Business Strategist"
+                      className="w-full h-full object-cover"
+                      onError={(e) => {
+                        // Fallback to placeholder if image fails to load
+                        const target = e.target as HTMLImageElement;
+                        target.style.display = 'none';
+                        target.nextElementSibling?.classList.remove('hidden');
+                      }}
+                    />
+                    <div className="w-full h-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center hidden">
+                      <div className="text-center">
+                        <div className="w-32 h-32 bg-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center">
+                          <span className="text-4xl font-bold text-white">HJ</span>
+                        </div>
+                        <p className="text-gray-600 dark:text-gray-300 text-sm">
+                          Professional Photo
+                        </p>
                       </div>
-                      <p className="text-gray-600 dark:text-gray-300 text-sm">
-                        Professional Photo
-                      </p>
                     </div>
                   </div>
                 </div>
