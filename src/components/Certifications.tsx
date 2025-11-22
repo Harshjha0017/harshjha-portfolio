@@ -30,7 +30,17 @@ const Certifications = () => {
       icon: Award,
       gradient: "from-green-500 to-green-600",
       verified: true
+     },
+     {
+     title: "OCI 2025 AI Foundations Associate",
+     provider: "Oracle",
+     description:
+     "Oracle Cloud Infrastructure AI Foundations Associate certification demonstrating validated AI concepts, OCI machine learning foundations, and practical cloud AI understanding.",
+     icon: Award,
+     gradient: "from-red-500 to-red-600",
+     verified: true
     }
+
   ];
 
   return (
