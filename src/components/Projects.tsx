@@ -30,7 +30,7 @@ const Projects = () => {
       technologies: ["Python", "SQL", "Power BI"],
       icon: Database,
       gradient: "from-orange-500 to-red-500",
-      github: "https://github.com/Harshjha0017/Customer-Churn-Analysis"
+      github: "https://github.com/Harshjha0017"
     },
     {
       title: "Retail Sales Forecasting",
@@ -39,7 +39,7 @@ const Projects = () => {
       technologies: ["Python", "Power BI", "Matplotlib"],
       icon: LineChart,
       gradient: "from-purple-500 to-purple-600",
-      github: "https://github.com/Harshjha0017/Retail-Sales-Forecasting-Inventory-Optimization"
+      github: "https://github.com/Harshjha0017"
     },
     {
       title: "Term Deposit Prediction",
@@ -48,7 +48,7 @@ const Projects = () => {
       technologies: ["Python", "NumPy", "Power BI"],
       icon: PieChart,
       gradient: "from-green-500 to-green-600",
-      github: "https://github.com/Harshjha0017/term-deposit-prediction"
+      github: "https://github.com/Harshjha0017"
     },
     {
       title: "Lead Funnel Analysis",
@@ -74,8 +74,8 @@ const Projects = () => {
             Projects
           </h2>
 
-          {/* Project Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 mb-12">
+          {/* Project Cards + Coming Soon in 6th Position */}
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
             {projects.map((project, index) => (
               <div
                 key={project.title}
@@ -114,36 +114,39 @@ const Projects = () => {
                     ))}
                   </div>
 
-                  {/* GitHub Button */}
-                  <div className="inline-flex items-center space-x-2 text-blue-500 font-medium text-sm mt-auto">
+                  {/* GitHub Link - Text + Icon Both Clickable */}
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center space-x-2 text-blue-500 hover:text-blue-600 font-medium text-sm transition-colors mt-auto"
+                    aria-label={`View ${project.title} on GitHub`}
+                  >
                     <span>View on GitHub</span>
-                    <a
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="hover:text-blue-600 transition-colors"
-                      aria-label={`View ${project.title} on GitHub`}
-                    >
-                      <ExternalLink className="h-4 w-4" />
-                    </a>
-                  </div>
+                    <ExternalLink className="h-4 w-4" />
+                  </a>
                 </div>
               </div>
             ))}
-          </div>
 
-          {/* Coming Soon */}
-          <div className="max-w-md mx-auto">
-            <div className="bg-white dark:bg-gray-900 rounded-2xl shadow-lg border-2 border-dashed border-gray-300 dark:border-gray-600 p-6 text-center">
-              <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-gray-400 to-gray-500 flex items-center justify-center mx-auto mb-5">
-                <MonitorSmartphone className="h-7 w-7 text-white" />
+            {/* Coming Soon Card in 6th Position */}
+            <div
+              className={`bg-white dark:bg-gray-900 rounded-2xl shadow-lg border-2 border-dashed border-gray-300 dark:border-gray-600 transition-all duration-300 h-full ${
+                isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+              }`}
+              style={{ transitionDelay: `${projects.length * 150}ms` }}
+            >
+              <div className="p-6 h-full flex flex-col items-center justify-center text-center">
+                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-gray-400 to-gray-500 flex items-center justify-center mb-5">
+                  <MonitorSmartphone className="h-7 w-7 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
+                  More Projects Coming Soon
+                </h3>
+                <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
+                  I’m actively building more Business Analyst and data-driven case studies to expand this portfolio.
+                </p>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
-                More Projects Coming Soon
-              </h3>
-              <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
-                I’m actively building more Business Analyst and data-driven case studies to expand this portfolio.
-              </p>
             </div>
           </div>
         </div>
