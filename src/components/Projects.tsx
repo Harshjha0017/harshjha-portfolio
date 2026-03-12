@@ -17,46 +17,46 @@ const Projects = () => {
     {
       title: "Sales Dashboard with EDA",
       description:
-        "Comprehensive sales analysis dashboard featuring exploratory data analysis, trend identification, and interactive visualizations. Built with Python and Power BI to provide actionable business insights.",
+        "Built an interactive sales dashboard with exploratory data analysis, trend tracking, and visual insights to support business decision-making.",
       technologies: ["Python", "Power BI", "Excel"],
       icon: BarChart3,
       gradient: "from-blue-500 to-blue-600",
       github: "https://github.com/Harshjha0017"
     },
     {
-      title: "Blinkit Data Analysis",
-      description:
-        "In-depth analysis of Blinkit's operational data focusing on delivery patterns, customer behavior, and business metrics. Identified key optimization opportunities and presented strategic recommendations.",
-      technologies: ["Python", "Matplotlib", "Seaborn"],
-      icon: TrendingUp,
-      gradient: "from-teal-500 to-teal-600",
-      github: "https://github.com/Harshjha0017"
-    },
-    {
-      title: "Retail Sales Forecasting & Inventory Optimization",
-      description:
-        "End-to-end analytics project — data cleaning, forecasting evaluation, inventory optimization, pricing analytics, and an interactive Power BI dashboard for business decision-making.",
-      technologies: ["BRD & FRD", "Python", "Matplotlib", "Seaborn", "Power BI"],
-      icon: LineChart,
-      gradient: "from-purple-500 to-purple-600",
-      github: "https://github.com/Harshjha0017"
-    },
-    {
       title: "Customer Churn Analysis",
       description:
-        "Predicted customer churn for a telecom company using statistical analysis and visualization to identify churn-driving factors and retention opportunities.",
-      technologies: ["Python", "Matplotlib", "Seaborn", "SQL", "Power BI"],
+        "Analyzed telecom customer churn patterns to identify key drivers, retention risks, and business opportunities using data visualization and SQL.",
+      technologies: ["Python", "SQL", "Power BI"],
       icon: Database,
       gradient: "from-orange-500 to-red-500",
-      github: "https://github.com/Harshjha0017"
+      github: "https://github.com/Harshjha0017/Customer-Churn-Analysis"
+    },
+    {
+      title: "Retail Sales Forecasting",
+      description:
+        "Performed sales forecasting and inventory analysis to improve stock planning, pricing visibility, and business performance reporting.",
+      technologies: ["Python", "Power BI", "Matplotlib"],
+      icon: LineChart,
+      gradient: "from-purple-500 to-purple-600",
+      github: "https://github.com/Harshjha0017/Retail-Sales-Forecasting-Inventory-Optimization"
     },
     {
       title: "Term Deposit Prediction",
       description:
-        "A bank marketing-case project using Python and Power BI to explore customer conversion factors and predict term deposit subscriptions.",
-      technologies: ["Python", "Matplotlib", "NumPy", "Power BI"],
+        "Analyzed bank marketing data to identify conversion factors and predict customer subscription behavior for term deposit campaigns.",
+      technologies: ["Python", "NumPy", "Power BI"],
       icon: PieChart,
       gradient: "from-green-500 to-green-600",
+      github: "https://github.com/Harshjha0017/term-deposit-prediction"
+    },
+    {
+      title: "Lead Funnel Analysis",
+      description:
+        "Created a business-focused lead funnel case study to analyze engagement stages, conversion drop-offs, and customer acquisition performance.",
+      technologies: ["Excel", "Power BI", "Business Analysis"],
+      icon: TrendingUp,
+      gradient: "from-teal-500 to-teal-600",
       github: "https://github.com/Harshjha0017"
     }
   ];
@@ -75,39 +75,39 @@ const Projects = () => {
           </h2>
 
           {/* Project Cards */}
-          <div className="grid md:grid-cols-2 gap-8 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 mb-12">
             {projects.map((project, index) => (
               <div
                 key={project.title}
-                className={`bg-white dark:bg-gray-900 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 ${
+                className={`bg-white dark:bg-gray-900 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 h-full ${
                   isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
                 }`}
-                style={{ transitionDelay: `${index * 200}ms` }}
+                style={{ transitionDelay: `${index * 150}ms` }}
               >
-                <div className="p-8">
+                <div className="p-6 h-full flex flex-col">
                   {/* Icon */}
                   <div
-                    className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${project.gradient} flex items-center justify-center mb-6`}
+                    className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${project.gradient} flex items-center justify-center mb-5`}
                   >
-                    <project.icon className="h-8 w-8 text-white" />
+                    <project.icon className="h-7 w-7 text-white" />
                   </div>
 
                   {/* Title */}
-                  <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3 leading-snug">
                     {project.title}
                   </h3>
 
                   {/* Description */}
-                  <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
+                  <p className="text-sm text-gray-600 dark:text-gray-300 mb-5 leading-relaxed flex-grow">
                     {project.description}
                   </p>
 
                   {/* Technologies */}
-                  <div className="flex flex-wrap gap-2 mb-6">
+                  <div className="flex flex-wrap gap-2 mb-5">
                     {project.technologies.map((tech) => (
                       <span
                         key={tech}
-                        className="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full text-sm font-medium"
+                        className="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full text-xs font-medium"
                       >
                         {tech}
                       </span>
@@ -115,15 +115,18 @@ const Projects = () => {
                   </div>
 
                   {/* GitHub Button */}
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center space-x-2 text-blue-500 hover:text-blue-600 font-medium transition-colors"
-                  >
+                  <div className="inline-flex items-center space-x-2 text-blue-500 font-medium text-sm mt-auto">
                     <span>View on GitHub</span>
-                    <ExternalLink className="h-4 w-4" />
-                  </a>
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-blue-600 transition-colors"
+                      aria-label={`View ${project.title} on GitHub`}
+                    >
+                      <ExternalLink className="h-4 w-4" />
+                    </a>
+                  </div>
                 </div>
               </div>
             ))}
@@ -131,16 +134,15 @@ const Projects = () => {
 
           {/* Coming Soon */}
           <div className="max-w-md mx-auto">
-            <div className="bg-white dark:bg-gray-900 rounded-2xl shadow-lg border-2 border-dashed border-gray-300 dark:border-gray-600 p-8 text-center">
-              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-gray-400 to-gray-500 flex items-center justify-center mx-auto mb-6">
-                <MonitorSmartphone className="h-8 w-8 text-white" />
+            <div className="bg-white dark:bg-gray-900 rounded-2xl shadow-lg border-2 border-dashed border-gray-300 dark:border-gray-600 p-6 text-center">
+              <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-gray-400 to-gray-500 flex items-center justify-center mx-auto mb-5">
+                <MonitorSmartphone className="h-7 w-7 text-white" />
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
                 More Projects Coming Soon
               </h3>
-              <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                I’m working on more exciting data analysis and BI projects.  
-                New dashboards and case studies will be added soon!
+              <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
+                I’m actively building more Business Analyst and data-driven case studies to expand this portfolio.
               </p>
             </div>
           </div>
