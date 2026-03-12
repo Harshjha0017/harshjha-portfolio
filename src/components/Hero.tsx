@@ -32,7 +32,7 @@ const Hero = () => {
             Harsh <span className="text-blue-500">Jha</span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-4 font-medium">
-            Data Analyst & Business Strategist
+            Data Analyst & Business Analyst
           </p>
           <p className="text-lg md:text-xl text-blue-600 dark:text-blue-400 mb-8 italic">
             "Driven by data, rooted in insight."
@@ -64,11 +64,11 @@ const Hero = () => {
               <span>Harshjha0017@gmail.com</span>
             </a>
             <a 
-              href="tel:+919272092042"
+              href="tel:+919665316416"
               className="flex items-center space-x-2 text-gray-700 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
             >
               <Phone className="h-5 w-5" />
-              <span>+91 9272092042</span>
+              <span>+91 9665316416</span>
             </a>
             <a 
               href="https://www.linkedin.com/in/harsh-jha-bb817023a/"
