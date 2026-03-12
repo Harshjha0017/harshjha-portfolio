@@ -25,7 +25,7 @@ const About = () => {
                   <div className="w-full h-full rounded-2xl overflow-hidden">
                     <img 
                       src="/profile-image.jpg" 
-                      alt="Harsh Jha - Data Analyst & Business Strategist"
+                      alt="Harsh Jha - Data Analyst & Business Analyst"
                       className="w-full h-full object-cover"
                       onError={(e) => {
                         // Fallback to placeholder if image fails to load
@@ -53,28 +53,29 @@ const About = () => {
             <div className="space-y-6">
               <div className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
                 <p className="mb-6">
-                  "When I'm not analyzing data, you'll find me working on real-world business problems, 
-                  building business case studies, or helping others understand the practical side of analytics."
+                  "When I’m not analyzing data, I’m usually working on real-world business problems,
+                  building case studies, improving lead conversion strategies, or exploring how analytics can drive smarter decisions.."
                 </p>
                 
                 <p className="mb-6">
-                  As a data analyst and business strategist from Pune, I combine technical expertise 
-                  with business acumen to deliver actionable insights that drive meaningful results. 
-                  My passion lies in transforming complex data into clear, strategic recommendations 
-                  that help organizations make informed decisions.
+                  I’m an aspiring Business Analyst with a strong interest in data analytics, business strategy, and process improvement. 
+                  I combine hands-on business development experience with technical skills in Python, SQL, Power BI, 
+                  and Excel to solve practical business problems and turn data into actionable insights.
                 </p>
                 
                 <p>
-                  With experience in founding and running Labourmate, I understand the challenges 
-                  of building data-driven solutions from the ground up. I'm currently pursuing 
-                  B.Tech in ITDS while continuously expanding my expertise in data analysis and 
-                  business strategy.
+                 Through my experience at Movidu Technology, Noida, I’ve worked on lead generation, student outreach, follow-ups, and conversion strategy, 
+                 gaining real exposure to sales funnels, customer communication, and business growth. 
+                 I’m currently focused on building impactful Business Analyst projects and strengthening my ability to connect business understanding with data-driven decision-making.
                 </p>
               </div>
               
               <div className="flex flex-wrap gap-4">
                 <div className="bg-blue-100 dark:bg-blue-900 px-4 py-2 rounded-full">
                   <span className="text-blue-800 dark:text-blue-200 font-medium">Data Analysis</span>
+                </div>
+                <div className="bg-blue-100 dark:bg-blue-900 px-4 py-2 rounded-full">
+                  <span className="text-gray-800 dark:text-blue-200 font-medium">Business Analysis</span>
                 </div>
                 <div className="bg-teal-100 dark:bg-teal-900 px-4 py-2 rounded-full">
                   <span className="text-teal-800 dark:text-teal-200 font-medium">Business Strategy</span>
